@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4034328432721036}
   - component: {fileID: 212807311595422360}
-  - component: {fileID: 114857725963920718}
+  - component: {fileID: 114327506168588160}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114857725963920718
+--- !u!114 &114327506168588160
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c14ecc15c9bcb4298ba35b3017f8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 4034328432721036}
+  rock: {fileID: 1952225810664670, guid: 5ad24d42021909245a8cec5568f03999, type: 2}
 --- !u!212 &212807311595422360
 SpriteRenderer:
   m_ObjectHideFlags: 1

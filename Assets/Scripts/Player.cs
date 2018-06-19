@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class Player : MonoBehaviour {
+
+    public Transform rock;
+
 
     public Rigidbody2D rb;
     public float movementForce = 30f;
@@ -21,9 +24,19 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKey("w"))
         {
-            rb.velocity += (jumpForce * Vector2.up) * Time.deltaTime;
-            //transform.position += transform.up * (jumpForce * Time.deltaTime);
+            //rb.velocity += (jumpForce * Vector2.up) * Time.deltaTime;
+            transform.position += transform.up * (jumpForce * Time.deltaTime);
         }
-		
+
+        IsPlayerKilled();
 	}
+
+    void IsPlayerKilled()
+    {
+        if (rb.position == new Vector2(rock.position.x, rock.position.y))
+        {
+            Debug.Log("Tod");
+        }
+
+    }
 }
