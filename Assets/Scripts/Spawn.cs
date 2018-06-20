@@ -2,26 +2,17 @@
 using UnityEngine;
 
 public class Spawn : MonoBehaviour {
-
-    private float countdown = 1f;
-
+   
     public Transform spawnPoint;
     public GameObject rock;
+    public bool spawning = true;
     
-
     void Start()
     {
-        StartCoroutine(SpawnRock());
-    }
-
-    void Update()
-    {
-        if (countdown <= 0f)
+        if (spawning)
         {
-            SpawnRock();
+            StartCoroutine(SpawnRock());
         }
-
-        countdown -= Time.deltaTime;
     }
 
     IEnumerator SpawnRock()

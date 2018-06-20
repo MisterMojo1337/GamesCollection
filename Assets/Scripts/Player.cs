@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Player : MonoBehaviour {
-
-    public Transform rock;
-
+    
+    public GameObject graveStone;
 
     public Rigidbody2D rb;
     public float movementForce = 30f;
     public float jumpForce = 20f;
 
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+    }
+    // Update is called once per frame
+    void Update () {
 
         if (Input.GetKey("d"))
         {
@@ -28,15 +31,15 @@ public class Player : MonoBehaviour {
             transform.position += transform.up * (jumpForce * Time.deltaTime);
         }
 
-        IsPlayerKilled();
-	}
-
-    void IsPlayerKilled()
-    {
-        if (rb.position == new Vector2(rock.position.x, rock.position.y))
+        if (FindObjectsOfType<Rock>().Any(x => x.gotPlayerHit))
         {
-            Debug.Log("Tod");
+            KillPlayer();
         }
+    }
 
+    void KillPlayer()
+    {
+        Destroy(gameObject);
+        Instantiate(graveStone, transform.position, transform.rotation);
     }
 }

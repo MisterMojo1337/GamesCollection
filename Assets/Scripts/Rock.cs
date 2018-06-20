@@ -1,21 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rock : MonoBehaviour {
 
-    public Transform plane;
-    public Transform rock;
+    public bool gotPlayerHit = false;
 
-	void Update() {
-        DestroyRock();
-	}
-
-    void DestroyRock()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (rock.position.y <= plane.position.y)
+        if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            gotPlayerHit = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Destroy(gameObject);
     }
 }
