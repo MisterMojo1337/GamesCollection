@@ -12,11 +12,12 @@ public class Panzer : MonoBehaviour
     public float movementForce = 30f;
     public float jumpForce = 20f;
     private float distToGround;
-
+    private SpriteRenderer flipIt;
 
     private void Start()
     {
         distToGround = transform.position.y;
+        flipIt = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
     void Update()
@@ -25,10 +26,12 @@ public class Panzer : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(new Vector3(movementForce * Time.deltaTime, 0));
+            flipIt.flipX = true;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(new Vector3(-movementForce * Time.deltaTime, 0));
+            flipIt.flipX = false;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
