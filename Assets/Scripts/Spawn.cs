@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Spawn : MonoBehaviour {
@@ -6,12 +7,15 @@ public class Spawn : MonoBehaviour {
     public Transform spawnPoint;
     public GameObject rock;
     public bool spawning = true;
-    
+
+    public float difficulty = 95f;
+
     void Start()
     {
         if (spawning)
         {
             StartCoroutine(SpawnRock());
+            StartCoroutine(GetDifficulty());
         }
     }
 
@@ -21,12 +25,20 @@ public class Spawn : MonoBehaviour {
         {
             var temp = Random.value;
             var temp2 = temp * 100;
-            if (temp2 > 90)
+            if (temp2 > difficulty)
             {
                 Instantiate(rock, spawnPoint.position, spawnPoint.rotation);
             }            
             yield return new WaitForSeconds(temp);
+        }        
+    }
+
+    IEnumerator GetDifficulty()
+    {
+        while (FindObjectsOfType<Player>().Count() >= 1)
+        {
+            difficulty -= 1f;
+            yield return new WaitForSeconds(1);
         }
-        
     }
 }

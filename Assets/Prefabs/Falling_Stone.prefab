@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d92914a7a2c8404a8fd0f2a2f009a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 1450023814730774, guid: 6b8b23f2f477d6a4da2042c64ce99fe2, type: 2}
   gotPlayerHit: 0
 --- !u!212 &212367916712896050
 SpriteRenderer:
