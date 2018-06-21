@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1948656905305592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -3.444, z: 90}
+  m_LocalPosition: {x: 0.21999788, y: 1.2929993, z: 90}
   m_LocalScale: {x: 0.78886116, y: 0.7439073, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c, type: 2}
   rb: {fileID: 50283573122755012}
-  movementForce: 750
+  movementForce: 5
   jumpForce: 6
 --- !u!212 &212637448531779478
 SpriteRenderer:
