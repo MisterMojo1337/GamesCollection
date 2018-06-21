@@ -13,7 +13,7 @@ public class GameMaster : MonoBehaviour {
     }
     void Update()
     {
-        if (FindObjectsOfType<Rock>().Any(x => x.gotPlayerHit))
+        if (GameObject.FindGameObjectsWithTag("Gravestone").Count() == 2)
         {
             EndGame();
         }

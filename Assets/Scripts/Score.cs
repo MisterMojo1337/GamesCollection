@@ -9,11 +9,14 @@ public class Score : MonoBehaviour {
 
     private float timer;
     private string endTime;
-	
-	// Update is called once per frame
-	void Update () {
+    private bool gotPlayerHit;
+    private bool gotpanzerHit;
 
-        if (!FindObjectsOfType<Rock>().Any(x => x.gotPlayerHit))
+    
+    // Update is called once per frame
+    void Update () {
+
+        if (GameObject.FindGameObjectsWithTag("Gravestone").Count() != 2)
         {
             endTime = Timer();
         } else
