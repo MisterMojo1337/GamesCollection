@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198080720918167898}
   - component: {fileID: 199720070197333464}
   m_Layer: 0
-  m_Name: Stone_Crack
+  m_Name: PSHealkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -36,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1948656905305592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21999788, y: 1.2929993, z: 90}
-  m_LocalScale: {x: 0.78886116, y: 0.7439073, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -537.30853, y: -489.02213, z: 82.11163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61085574440600112
 BoxCollider2D:
@@ -99,11 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c140da909aea8024cb5e0ff075e82cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  movementForce: 5
+  jumpForce: 300
   graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c, type: 2}
   rb: {fileID: 50283573122755012}
-  movementForce: 5
-  jumpForce: 6
-  playerTime: 0
+  scoreText: {fileID: 0}
+  flipIt: {fileID: 212637448531779478}
+  timer: 0
+  distToGround: 0
 --- !u!212 &212637448531779478
 SpriteRenderer:
   m_ObjectHideFlags: 1

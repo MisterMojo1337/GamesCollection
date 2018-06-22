@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour {
    
     public Transform spawnPoint;
     public GameObject rock;
+    public GameObject healKit;
     public bool spawning = true;
 
     public float difficulty = 95f;
@@ -27,7 +28,13 @@ public class Spawn : MonoBehaviour {
             var temp2 = temp * 100;
             if (temp2 > difficulty)
             {
-                Instantiate(rock, spawnPoint.position, spawnPoint.rotation);
+                if (temp2 > 99.5)
+                {
+                    Instantiate(healKit, transform.position, transform.rotation);
+                } else
+                {
+                    Instantiate(rock, spawnPoint.position, spawnPoint.rotation);
+                }
             }            
             yield return new WaitForSeconds(temp);
         }        

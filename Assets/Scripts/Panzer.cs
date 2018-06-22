@@ -1,56 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Linq;
 
-public class Panzer : MonoBehaviour
-{
-
-    public GameObject graveStone;
-    public Rigidbody2D rb;
-
-    public float movementForce = 30f;
-    public float jumpForce = 20f;
-    private float distToGround;
-    private SpriteRenderer flipIt;
+public class Panzer : BaseCharacter {
 
     private void Start()
-    {
+    { 
         distToGround = transform.position.y;
-        flipIt = GetComponent<SpriteRenderer>();
     }
+
     // Update is called once per frame
     void Update()
     {
+        GetMovement(KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow);
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (gameObject.activeSelf)
         {
-            transform.Translate(new Vector3(movementForce * Time.deltaTime, 0));
-            flipIt.flipX = true;
+            timer += Time.deltaTime;
+            scoreText.text = "" + timer.ToString("F2") + "";
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(new Vector3(-movementForce * Time.deltaTime, 0));
-            flipIt.flipX = false;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            if (distToGround + 0.1 >= transform.position.y)
-            {
-                rb.velocity = new Vector2(0, jumpForce * Time.deltaTime);
-            }
-
-        }
-
         if (FindObjectsOfType<Rock>().Any(x => x.gotPanzerHit))
         {
-            KillPanzer();
+            healthPoints -= 50;
+            if (healthPoints <= 0)
+            {
+                KillEntity(gameObject);
+            }
         }
-    }
-
-    void KillPanzer()
-    {
-        Destroy(gameObject);
-        Instantiate(graveStone, transform.position, transform.rotation);
+        if (FindObjectsOfType<Healkit>().Any(x => x.gotPanzerHeal))
+        {
+            healthPoints += 100;
+        }
     }
 }

@@ -54,7 +54,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4034328432721036}
   rock: {fileID: 1952225810664670, guid: 5ad24d42021909245a8cec5568f03999, type: 2}
-  spawning: 0
+  healKit: {fileID: 1197661899321186, guid: 4fdee76009b49b047b9c784e5f78da04, type: 2}
+  spawning: 1
   difficulty: 95
 --- !u!212 &212807311595422360
 SpriteRenderer:
