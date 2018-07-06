@@ -280,6 +280,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 259520780}
+    - target: {fileID: 114056784330329824, guid: 7b83608a559fbe84b9468d319b958ea7,
+        type: 2}
+      propertyPath: movementForce
+      value: 4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b83608a559fbe84b9468d319b958ea7, type: 2}
   m_IsPrefabParent: 0
