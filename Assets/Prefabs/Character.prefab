@@ -99,12 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c140da909aea8024cb5e0ff075e82cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 50
+  healthPoints: 200
   movementForce: 5
   jumpForce: 300
   graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c, type: 2}
   rb: {fileID: 50283573122755012}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 114085518531807260, guid: 610f2495f19e3f1489d1d4364ab18cf3,
+    type: 2}
   flipIt: {fileID: 212637448531779478}
   timer: 0
   distToGround: 0
