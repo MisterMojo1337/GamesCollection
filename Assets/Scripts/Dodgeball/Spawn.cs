@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -41,7 +42,7 @@ public class Spawn : MonoBehaviour {
 
     IEnumerator GetDifficulty()
     {
-        while (FindObjectsOfType<Player>().Count() >= 1)
+        while (GameObject.FindGameObjectsWithTag("Player").Count() >= 1)
         {
             difficulty -= 1f;
             yield return new WaitForSeconds(1);
