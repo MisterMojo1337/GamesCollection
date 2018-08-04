@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Linq;
 
-public class Player : BaseCharacter {
+public class Player : BaseCharacterDB {
 
 
     private void Start()

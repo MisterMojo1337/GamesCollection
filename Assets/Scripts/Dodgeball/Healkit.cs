@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-public class Healkit : BaseObject {
+public class Healkit : BaseObjectDB {
     
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.transform.name == "Character")
         {
             gotPlayerHeal = true;
         }
-        if (collision.CompareTag("Panzer"))
+        if (collision.transform.name == "Panzer")
         {
             gotPanzerHeal = true;
         }

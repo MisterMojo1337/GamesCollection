@@ -5,16 +5,21 @@ public class Menu : MonoBehaviour {
     
     public void StartCatchGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.GetSceneByName("CatchGame");
+    }
+
+    public void StartClimbDaTower()
+    {
+        SceneManager.GetSceneByName("ClimbDaTower");
     }
 
     public void StartDodgeBall()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.GetSceneByName("DodgeBall");
     }
 
     public void GoMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.GetSceneByName("CatchGame");
     }
 }

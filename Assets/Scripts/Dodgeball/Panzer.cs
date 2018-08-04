@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Linq;
 
-public class Panzer : BaseCharacter {
+public class Panzer : BaseCharacterDB {
 
     private void Start()
     { 
