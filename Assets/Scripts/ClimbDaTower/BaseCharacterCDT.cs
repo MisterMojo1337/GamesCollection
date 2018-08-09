@@ -7,11 +7,11 @@ public abstract class BaseCharacterCDT : MonoBehaviour {
     
     public float movementForce = 5f;
     public float jumpForce = 300f;
+    public float jumpCounter = 1;
 
     [Header("Unity Setup Fields")]
     public Rigidbody2D rb;   
     public SpriteRenderer flipIt;
-    public float distToPlatform;
 
 
 
@@ -29,9 +29,10 @@ public abstract class BaseCharacterCDT : MonoBehaviour {
         }
         if (Input.GetKey(up))
         {
-            if (distToPlatform + 0.1 >= transform.position.y)
+            if (jumpCounter > 0)
             {
                 rb.velocity = new Vector2(0, jumpForce * Time.deltaTime);
+                jumpCounter -= 1;
             }
         }
     }
