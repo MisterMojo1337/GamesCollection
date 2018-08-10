@@ -7254,11 +7254,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4342146402205582, guid: d8b39d649ba663b469b11ce21789d18d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.98
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4342146402205582, guid: d8b39d649ba663b469b11ce21789d18d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.76
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4342146402205582, guid: d8b39d649ba663b469b11ce21789d18d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7287,6 +7287,11 @@ Prefab:
     - target: {fileID: 4342146402205582, guid: d8b39d649ba663b469b11ce21789d18d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383554515269988, guid: d8b39d649ba663b469b11ce21789d18d,
+        type: 2}
+      propertyPath: angularSpeed
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b39d649ba663b469b11ce21789d18d, type: 2}
