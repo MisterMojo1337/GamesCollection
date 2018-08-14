@@ -14,3 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CatchGame.unity
     guid: 857cfd873e7cc3e479008ec9125e0753
+  - enabled: 1
+    path: Assets/Scenes/ClimbDaTower.unity
+    guid: 1a62a21ed2830204f8d34bb24395125f
+  m_configObjects: {}

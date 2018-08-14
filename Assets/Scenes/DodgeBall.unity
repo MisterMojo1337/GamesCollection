@@ -289,6 +289,11 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114056784330329824, guid: 7b83608a559fbe84b9468d319b958ea7,
+        type: 2}
+      propertyPath: healthPoints
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b83608a559fbe84b9468d319b958ea7, type: 2}
   m_IsPrefabAsset: 0
@@ -550,6 +555,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1495482082211698, guid: 79caa56cbcbe7ab44ad3007c700680e1,
     type: 2}
   m_PrefabInternal: {fileID: 578079357}
+--- !u!114 &568815928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568815927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e72185025e52848ba847b7af2180dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &573765803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4034328432721036, guid: f53b4a2d237596445b6d9c3468a0d202,
@@ -652,7 +668,37 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114560211520740758, guid: 79caa56cbcbe7ab44ad3007c700680e1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 568815928}
+    - target: {fileID: 114560211520740758, guid: 79caa56cbcbe7ab44ad3007c700680e1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartDodgeBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560211520740758, guid: 79caa56cbcbe7ab44ad3007c700680e1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495482082211698, guid: 79caa56cbcbe7ab44ad3007c700680e1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114142151782217268, guid: 79caa56cbcbe7ab44ad3007c700680e1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 568815928}
+    - target: {fileID: 114142151782217268, guid: 79caa56cbcbe7ab44ad3007c700680e1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoMainMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114076961840305728, guid: 79caa56cbcbe7ab44ad3007c700680e1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 79caa56cbcbe7ab44ad3007c700680e1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &610011246
@@ -789,6 +835,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1491276514}
+    - target: {fileID: 114934093014078636, guid: 0feb044021bf78c4cb8cb47a6dc14990,
+        type: 2}
+      propertyPath: healthPoints
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0feb044021bf78c4cb8cb47a6dc14990, type: 2}
   m_IsPrefabAsset: 0
