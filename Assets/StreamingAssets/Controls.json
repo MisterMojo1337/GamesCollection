@@ -1,0 +1,28 @@
+{
+  "Items": [
+    {
+      "Id": "Player1",
+      "InputJump": "W",
+      "InputLeft": "A",
+      "InputRight": "D"
+    },
+    {
+      "Id": "Player2",
+      "InputJump": "U",
+      "InputLeft": "H",
+      "InputRight": "K"
+    },
+    {
+      "Id": "Player3",
+      "InputJump": "W",
+      "InputLeft": "A",
+      "InputRight": "D"
+    },
+    {
+      "Id": "Player4",
+      "InputJump": "W",
+      "InputLeft": "A",
+      "InputRight": "D"
+    }
+  ]
+}
