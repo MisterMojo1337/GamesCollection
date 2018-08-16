@@ -1,28 +1,32 @@
 {
-  "Items": [
-    {
-      "Id": "Player1",
-      "InputJump": "W",
-      "InputLeft": "A",
-      "InputRight": "D"
-    },
-    {
-      "Id": "Player2",
-      "InputJump": "U",
-      "InputLeft": "H",
-      "InputRight": "K"
-    },
-    {
-      "Id": "Player3",
-      "InputJump": "W",
-      "InputLeft": "A",
-      "InputRight": "D"
-    },
-    {
-      "Id": "Player4",
-      "InputJump": "W",
-      "InputLeft": "A",
-      "InputRight": "D"
-    }
-  ]
+    "Items": [
+        {
+            "Id": "Player1",
+            "Active": 1,
+            "InputJump": "F",
+            "InputLeft": "D",
+            "InputRight": "Q"
+        },
+        {
+            "Id": "Player2",
+            "Active": 1,
+            "InputJump": "M",
+            "InputLeft": "H",
+            "InputRight": "V"
+        },
+        {
+            "Id": "Player3",
+            "Active": 0,
+            "InputJump": "W",
+            "InputLeft": "A",
+            "InputRight": "D"
+        },
+        {
+            "Id": "Player4",
+            "Active": 0,
+            "InputJump": "W",
+            "InputLeft": "A",
+            "InputRight": "D"
+        }
+    ]
 }

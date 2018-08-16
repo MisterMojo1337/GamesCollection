@@ -17,15 +17,21 @@ public class GetControls : MonoBehaviour {
     public GameObject unRdyBtn;
 
     private string jsonPath;
-    private string jsonString;
-    private int i = 0;
+    private int i;
     private Control[] playerList = new Control[4];
 
-    private void Start()
+    private void Awake()
     {
         jsonPath = Application.streamingAssetsPath + "/Controls.json";
-        jsonString = File.ReadAllText(jsonPath);
-        playerList= JsonHelper.FromJson<Control>(jsonString);
+
+        var counter = 0;
+        foreach (var jsonEntry in JsonHelper.FromJson<Control>(File.ReadAllText(jsonPath)))
+        {
+            playerList[counter] = jsonEntry;
+            playerList[counter].Active = 0;
+            counter++;
+        }
+        
         var objName = gameObject.name;
 
         foreach (var player in playerList)
@@ -55,11 +61,20 @@ public class GetControls : MonoBehaviour {
 
     private void TextboxToJson()
     {
+        var counter = 0;
+        foreach (var jsonEntry in JsonHelper.FromJson<Control>(File.ReadAllText(jsonPath)))
+        {
+            playerList[counter] = jsonEntry;
+            counter++;
+        }
+
         playerList[i].InputJump = inpJump.text;
         playerList[i].InputLeft = inpLeft.text;
         playerList[i].InputRight = inpRight.text;
+        playerList[i].Active = 1;
 
-        JsonHelper.ToJson(playerList, true);
+        var TbToJson = JsonHelper.ToJson(playerList, true);
+        File.WriteAllText(jsonPath, TbToJson);
     }
 
     private void JsonToTextbox(Control player)

@@ -1,0 +1,16 @@
+{
+    "Items": [
+        {
+            "Id": "Player1",
+        },
+        {
+            "Id": "Player2",
+        },
+        {
+            "Id": "Player3",
+        },
+        {
+            "Id": "Player4",
+        }
+    ]
+}

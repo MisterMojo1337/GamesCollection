@@ -9,9 +9,10 @@ namespace Assets.Scripts.MP_Selector
     [Serializable]
     public struct Control
     {
-            public string Id;
-            public string InputJump;
-            public string InputLeft;
-            public string InputRight;
+        public string Id;
+        public int Active;
+        public string InputJump;
+        public string InputLeft;
+        public string InputRight;
     }
 }
