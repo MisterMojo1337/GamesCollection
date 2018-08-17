@@ -7,25 +7,28 @@ using UnityEngine;
 
 public class GetSprites : MonoBehaviour {
 
-    public GameObject Characters;
+    public GameObject characters;
 
     private SpriteRenderer[] sprites;
     private List<OwnSprite> spriteList = new List<OwnSprite>();
-    private string jsonPath;
+    private string spritePath;
+    private string controlPath;
 
     private void Start()
     {
-        jsonPath = Application.streamingAssetsPath + "/Sprites.json";
+        spritePath = Application.streamingAssetsPath + "/Sprites.json";
+        controlPath = Application.streamingAssetsPath + "/Controls.json";
         GetSprite();
     }
     public void GetSprite()
     {
-        sprites = Characters.GetComponentsInChildren<SpriteRenderer>(false);
-        var counter = 0;
+        sprites = characters.GetComponentsInChildren<SpriteRenderer>(false);
+        var controlsEntry = JsonHelper.FromJson<Control>(File.ReadAllText(controlPath));
+        var counter = controlsEntry.Where(x => x.Active == 1).Count();
 
-        
+
 
         //var spriteToJson = JsonHelper.ToJson(spriteList, true);
-        //File.WriteAllText(jsonPath, spriteToJson);
+        //File.WriteAllText(spritePath, spriteToJson);
     }
 }

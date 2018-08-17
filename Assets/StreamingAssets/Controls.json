@@ -3,9 +3,9 @@
         {
             "Id": "Player1",
             "Active": 1,
-            "InputJump": "F",
-            "InputLeft": "D",
-            "InputRight": "Q"
+            "InputJump": "B",
+            "InputLeft": "H",
+            "InputRight": "E"
         },
         {
             "Id": "Player2",
@@ -16,14 +16,14 @@
         },
         {
             "Id": "Player3",
-            "Active": 0,
+            "Active": 1,
             "InputJump": "W",
             "InputLeft": "A",
             "InputRight": "D"
         },
         {
             "Id": "Player4",
-            "Active": 0,
+            "Active": 1,
             "InputJump": "W",
             "InputLeft": "A",
             "InputRight": "D"
