@@ -8,21 +8,27 @@ using System.IO;
 public class GameMaster : MonoBehaviour {
 
     public GameObject endScreen;
+    public GameObject players;
     public GameObject p1;
     public GameObject p2;
     public GameObject p3;
     public GameObject p4;
 
     private int player;
-    private string jsonPath;
+    private string controlPath;
+    private string spritePath;
     private void Start()
     {
-        jsonPath = Application.streamingAssetsPath + "/Controls.json";
-        var temp = JsonHelper.FromJson<Control>(File.ReadAllText(jsonPath));
+        controlPath = Application.streamingAssetsPath + "/Controls.json";
+        spritePath = Application.streamingAssetsPath + "/Sprites.json";
 
-        foreach (var character in temp)
+        var controls = JsonHelper.FromJson<Control>(File.ReadAllText(controlPath));
+        var sprites = JsonHelper.FromJson<OwnSprite>(File.ReadAllText(spritePath));
+        var temp = players.GetComponentsInChildren<Rigidbody2D>(true);
+
+        foreach (var character in controls)
         {
-            if (true)
+            if (character.Active == 1)
             {
                 player++;
             }

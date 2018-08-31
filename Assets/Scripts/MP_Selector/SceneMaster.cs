@@ -9,17 +9,20 @@ public class SceneMaster : MonoBehaviour {
 
     public GameObject players;
     public Text gameStart;
-    public GetSprites spriteScript;
 
     private List<Button> rdyBtnList = new List<Button>();
     private float timer = 3.5f;
     private int counter = 0;
+    private static string sceneName;
 
+    public void GetSceneName(string givenSceneName)
+    {
+        sceneName = givenSceneName;
+    }
 
     private void Start()
     {
-        var sceneBtnList = players.GetComponentsInChildren<Button>(true);
-        foreach (var button in sceneBtnList)
+        foreach (var button in players.GetComponentsInChildren<Button>(true))
         {
             if (button.name == "RdyButton")
             {
@@ -56,6 +59,7 @@ public class SceneMaster : MonoBehaviour {
         {
             gameStart.gameObject.SetActive(false);
             timer = 3.5f;
+            counter = 0;
         }
     }
 
@@ -69,21 +73,21 @@ public class SceneMaster : MonoBehaviour {
                 player.GetSprite(counter);
                 counter++;
             }
-            SceneManager.LoadScene("Dodgeball");
+            SceneManager.LoadScene(sceneName);
         }
     }
 
     private bool AllButtonsRdy()
     {
-        var counter = 0;
+        var buttonCounter = 0;
         foreach (var button in rdyBtnList)
         {
             if (!button.IsActive())
             {
-                counter++;
+                buttonCounter++;
             }           
         }
-        if (counter == rdyBtnList.Count)
+        if (buttonCounter == rdyBtnList.Count)
         {
             return true;
         }

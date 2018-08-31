@@ -2,24 +2,33 @@
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
-    
+
+    public SceneMaster sceneMaster;
+
+    public void Start()
+    {
+        
+    }
     public void StartCatchGame()
     {
-        SceneManager.GetSceneByBuildIndex(2);
+        sceneMaster.GetSceneName("CatchGame");
+        SceneManager.LoadScene("MultiplayerOptions");
     }
 
     public void StartClimbDaTower()
     {
-        SceneManager.GetSceneByBuildIndex(3);
+        sceneMaster.GetSceneName("ClimbDaTower");
+        SceneManager.LoadScene("MultiplayerOptions");
     }
 
     public void StartDodgeBall()
     {
-        SceneManager.GetSceneByBuildIndex(1);
+        sceneMaster.GetSceneName("DodgeBall");
+        SceneManager.LoadScene("MultiplayerOptions");
     }
 
     public void GoMainMenu()
     {
-        SceneManager.GetSceneByBuildIndex(0);
+        SceneManager.GetSceneByName("StartScreen");
     }
 }
