@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-public class Rock : BaseObject {
+public class Rock : BaseObjectDB {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.transform.name == "Character")
         {
             gotPlayerHit = true;
         }
-        if (collision.CompareTag("Panzer"))
+        if (collision.transform.name == "Panzer")
         {
             gotPanzerHit = true;
         }
