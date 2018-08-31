@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class BaseCharacter : MonoBehaviour {
+public abstract class BaseCharacterDB : MonoBehaviour {
 
     [Header("Attributes")]
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BaseObject : MonoBehaviour {
+public class BaseObjectDB : MonoBehaviour {
 
     public GameObject particles;
     public bool gotPlayerHit = false;
