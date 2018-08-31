@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Char_Select : MonoBehaviour {
 
     private List<GameObject> list = new List<GameObject>();
     private int listCounter = 0;
+    //private List<Sprite> spriteList;
 
+    //public GameObject characters;
     public GameObject maMan;
     public GameObject panzer;
     public GameObject roundy;
 
     private void Awake()
     {
+
         list.Add(maMan);
         list.Add(panzer);
         list.Add(roundy);

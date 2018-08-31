@@ -7,15 +7,13 @@ using UnityEngine.UI;
 
 public class SceneMaster : MonoBehaviour {
 
-    //public GetSprites spriteScriptP1;
-    //public GetSprites spriteScriptP2;
-    //public GetSprites spriteScriptP3;
-    //public GetSprites spriteScriptP4;
     public GameObject players;
     public Text gameStart;
+    public GetSprites spriteScript;
 
     private List<Button> rdyBtnList = new List<Button>();
-    private float timer = 3f;
+    private float timer = 3.5f;
+    private int counter = 0;
 
 
     private void Start()
@@ -28,6 +26,7 @@ public class SceneMaster : MonoBehaviour {
                 rdyBtnList.Add(button);
             }
         }
+
         StartCoroutine(WhenBtnsRdy());
     }
 
@@ -47,20 +46,29 @@ public class SceneMaster : MonoBehaviour {
 
     private void Update()
     {
-        if (gameStart.IsActive())
+        if (AllButtonsRdy())
         {
+            gameStart.gameObject.SetActive(true);
             timer -= Time.deltaTime;
             gameStart.text = "" + timer.ToString("F0") + "";
             StartGameTimer();
+        } else
+        {
+            gameStart.gameObject.SetActive(false);
+            timer = 3.5f;
         }
     }
 
     private void StartGameTimer()
     {
-        gameStart.gameObject.SetActive(true);
+
         if (timer <= 0)
         {
-            var scriptList = players.GetComponentsInChildren<GetSprites>(true);
+            foreach (var player in players.GetComponentsInChildren<GetSprites>(false))
+            {
+                player.GetSprite(counter);
+                counter++;
+            }
             SceneManager.LoadScene("Dodgeball");
         }
     }

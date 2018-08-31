@@ -2,15 +2,19 @@
     "Items": [
         {
             "Id": "Player1",
+            "CharSprite": "Ma_Man (UnityEngine.Sprite)"
         },
         {
             "Id": "Player2",
+            "CharSprite": ""
         },
         {
             "Id": "Player3",
+            "CharSprite": ""
         },
         {
             "Id": "Player4",
+            "CharSprite": ""
         }
     ]
 }

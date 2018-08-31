@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 141937857}
   - component: {fileID: 141937858}
   - component: {fileID: 141937859}
+  - component: {fileID: 141937860}
   m_Layer: 5
   m_Name: Player3
   m_TagString: Untagged
@@ -745,6 +746,18 @@ MonoBehaviour:
   inpRight: {fileID: 2130700569}
   rdyBtn: {fileID: 66192742}
   unRdyBtn: {fileID: 1850509720}
+--- !u!114 &141937860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141937856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11427f59eb4a834c90859b49002582b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters: {fileID: 1385389163}
 --- !u!1 &143342237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3008,6 +3021,7 @@ GameObject:
   - component: {fileID: 680295049}
   - component: {fileID: 680295050}
   - component: {fileID: 680295051}
+  - component: {fileID: 680295052}
   m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
@@ -3067,6 +3081,18 @@ MonoBehaviour:
   inpRight: {fileID: 1574477592}
   rdyBtn: {fileID: 348157922}
   unRdyBtn: {fileID: 1699111234}
+--- !u!114 &680295052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680295048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11427f59eb4a834c90859b49002582b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters: {fileID: 2135698564}
 --- !u!1 &688818466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5096,6 +5122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: {fileID: 143342237}
   gameStart: {fileID: 1852769429}
+  spriteScript: {fileID: 0}
 --- !u!1 &1169707873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6970,6 +6997,7 @@ GameObject:
   - component: {fileID: 1577490817}
   - component: {fileID: 1577490818}
   - component: {fileID: 1577490819}
+  - component: {fileID: 1577490820}
   m_Layer: 5
   m_Name: Player4
   m_TagString: Untagged
@@ -6996,7 +7024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7535403, y: 0}
   m_AnchorMax: {x: 1, y: 0.866494}
-  m_AnchoredPosition: {x: 410.55817, y: -43.847954}
+  m_AnchoredPosition: {x: 410.5597, y: -43.847954}
   m_SizeDelta: {x: 268.78754, y: 564.2541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577490818
@@ -7029,6 +7057,18 @@ MonoBehaviour:
   inpRight: {fileID: 1480538215}
   rdyBtn: {fileID: 725849097}
   unRdyBtn: {fileID: 1478248618}
+--- !u!114 &1577490820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577490816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11427f59eb4a834c90859b49002582b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters: {fileID: 225034888}
 --- !u!1 &1638718337
 GameObject:
   m_ObjectHideFlags: 0

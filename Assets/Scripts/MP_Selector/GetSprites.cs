@@ -10,25 +10,42 @@ public class GetSprites : MonoBehaviour {
     public GameObject characters;
 
     private SpriteRenderer[] sprites;
-    private List<OwnSprite> spriteList = new List<OwnSprite>();
+    private OwnSprite[] spriteList = new OwnSprite[4];
     private string spritePath;
     private string controlPath;
+    
 
-    private void Start()
+    private void Awake()
     {
         spritePath = Application.streamingAssetsPath + "/Sprites.json";
-        controlPath = Application.streamingAssetsPath + "/Controls.json";
-        GetSprite();
+
+        var counter = 0;
+        foreach (var jsonEntry in JsonHelper.FromJson<OwnSprite>(File.ReadAllText(spritePath)))
+        {
+            spriteList[counter] = jsonEntry;
+            spriteList[counter].CharSprite = "";
+            counter++;
+        }
+        var spriteToJson = JsonHelper.ToJson(spriteList, true);
+        File.WriteAllText(spritePath, spriteToJson);
     }
-    public void GetSprite()
+    public void GetSprite(int playerId)
     {
         sprites = characters.GetComponentsInChildren<SpriteRenderer>(false);
-        var controlsEntry = JsonHelper.FromJson<Control>(File.ReadAllText(controlPath));
-        var counter = controlsEntry.Where(x => x.Active == 1).Count();
 
+        var counter = 0;
+        foreach (var jsonEntry in JsonHelper.FromJson<OwnSprite>(File.ReadAllText(spritePath)))
+        {
+            spriteList[counter] = jsonEntry;
+            counter++;
+        }
 
+        foreach (var playerSprite in sprites)
+        {
+            spriteList[playerId].CharSprite = playerSprite.sprite.ToString();
+        }
 
-        //var spriteToJson = JsonHelper.ToJson(spriteList, true);
-        //File.WriteAllText(spritePath, spriteToJson);
+        var spriteToJson = JsonHelper.ToJson(spriteList, true);
+        File.WriteAllText(spritePath, spriteToJson);
     }
 }
