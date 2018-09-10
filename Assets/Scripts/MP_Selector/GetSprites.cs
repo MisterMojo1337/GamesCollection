@@ -42,7 +42,9 @@ public class GetSprites : MonoBehaviour {
 
         foreach (var playerSprite in sprites)
         {
-            spriteList[playerId].CharSprite = playerSprite.sprite.ToString();
+            var playerSpriteString = playerSprite.sprite.ToString();
+            playerSpriteString = playerSpriteString.Substring(0, playerSpriteString.LastIndexOf(' '));
+            spriteList[playerId].CharSprite = playerSpriteString;
         }
 
         var spriteToJson = JsonHelper.ToJson(spriteList, true);

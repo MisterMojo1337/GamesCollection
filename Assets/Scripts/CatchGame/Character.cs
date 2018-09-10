@@ -12,12 +12,12 @@ public class Character : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector3(movementForce * Time.deltaTime, 0));
-            transform.Rotate(Time.deltaTime, 10, 0);
+            transform.Rotate(Time.deltaTime, 10, 45);
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(new Vector3(-movementForce * Time.deltaTime, 0));
-            transform.Rotate(Time.deltaTime, 0, 0);
+            transform.Rotate(Time.deltaTime, 10, 45);
         }
         if (Input.GetKey(KeyCode.W))
         {

@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 
-public class Rock : BaseObjectDB {
+public class Rock : MonoBehaviour {
+    
+    public GameObject particles;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name == "Character")
+        if (collision.GetComponentInChildren<CharacterControls>() != null)
         {
-            gotPlayerHit = true;
+            collision.GetComponentInChildren<CharacterControls>().healthPoints -= 50;
         }
-        if (collision.transform.name == "Panzer")
-        {
-            gotPanzerHit = true;
-        }
+
         Instantiate(particles, transform.position - new Vector3(0.1f, 0.1f), transform.rotation);
     }
 

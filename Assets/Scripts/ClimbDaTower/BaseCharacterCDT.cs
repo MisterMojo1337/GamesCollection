@@ -10,10 +10,9 @@ public abstract class BaseCharacterCDT : MonoBehaviour {
     public float jumpCounter = 1;
 
     [Header("Unity Setup Fields")]
+
     public Rigidbody2D rb;   
     public SpriteRenderer flipIt;
-
-
 
     public void GetMovement(KeyCode left, KeyCode right, KeyCode up)
     {

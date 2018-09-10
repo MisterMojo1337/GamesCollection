@@ -70,9 +70,9 @@ public class GetControls : MonoBehaviour {
             counter++;
         }
 
-        playerList[i].InputJump = inpJump.text;
-        playerList[i].InputLeft = inpLeft.text;
-        playerList[i].InputRight = inpRight.text;
+        playerList[i].InputJump = inpJump.text.ToLower();
+        playerList[i].InputLeft = inpLeft.text.ToLower();
+        playerList[i].InputRight = inpRight.text.ToLower();
         playerList[i].Active = 1;
 
         var TbToJson = JsonHelper.ToJson(playerList, true);

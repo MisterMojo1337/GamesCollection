@@ -10,14 +10,22 @@ public class Spawn : MonoBehaviour {
     public GameObject healKit;
     public bool spawning = true;
 
+    private int playerCount;
     public float difficulty = 95f;
 
     void Start()
-    {
+    {  
         if (spawning)
         {
             StartCoroutine(SpawnRock());
-            StartCoroutine(GetDifficulty());
+        }
+    }
+
+    private void Update()
+    {
+        if (GameObject.FindGameObjectsWithTag("Player").Count() != 0)
+        {
+            difficulty -= Time.deltaTime;
         }
     }
 
@@ -38,14 +46,5 @@ public class Spawn : MonoBehaviour {
             }            
             yield return new WaitForSeconds(spawnChance/100);
         }        
-    }
-
-    IEnumerator GetDifficulty()
-    {
-        while (GameObject.FindGameObjectsWithTag("Player").Count() >= 1)
-        {
-            difficulty -= 1f;
-            yield return new WaitForSeconds(1);
-        }
     }
 }

@@ -13,7 +13,7 @@ public class SceneMaster : MonoBehaviour {
     private List<Button> rdyBtnList = new List<Button>();
     private float timer = 3.5f;
     private int counter = 0;
-    private static string sceneName;
+    private static string sceneName = "Dodgeball";
 
     public void GetSceneName(string givenSceneName)
     {
