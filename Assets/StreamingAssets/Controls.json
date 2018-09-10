@@ -3,9 +3,9 @@
         {
             "Id": "Player1",
             "Active": 1,
-            "InputJump": "B",
-            "InputLeft": "H",
-            "InputRight": "E"
+            "InputJump": "up",
+            "InputLeft": "left",
+            "InputRight": "right"
         },
         {
             "Id": "Player2",

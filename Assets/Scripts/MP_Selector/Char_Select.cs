@@ -13,6 +13,7 @@ public class Char_Select : MonoBehaviour {
     public GameObject maMan;
     public GameObject panzer;
     public GameObject roundy;
+    public GameObject lilBruce;
 
     private void Awake()
     {
@@ -20,13 +21,14 @@ public class Char_Select : MonoBehaviour {
         list.Add(maMan);
         list.Add(panzer);
         list.Add(roundy);
+        list.Add(lilBruce);
         ShowSprite();
     }
     public void GetNextChar()
     {
         list[listCounter].SetActive(false);
         listCounter += 1;
-        if (listCounter > 2)
+        if (listCounter > list.Count - 1)
         {
             listCounter = 0;
         }
@@ -39,7 +41,7 @@ public class Char_Select : MonoBehaviour {
         listCounter -= 1;
         if (listCounter < 0)
         {
-            listCounter = 2;
+            listCounter = list.Count - 1;
         }
         ShowSprite();
     }
