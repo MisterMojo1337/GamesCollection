@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity

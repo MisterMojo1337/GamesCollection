@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 97b2e048e4c3d9a4991693140bef3c78
-timeCreated: 1529653312
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c,
+      type: 2}
+  - groundPlane: {fileID: 61659035303514204, guid: 5faaa5fac24397f4ca2301e563458b25,
+      type: 2}
+  - scoreText: {instanceID: 0}
+  - flipIt: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

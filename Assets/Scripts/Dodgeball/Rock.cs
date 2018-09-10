@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-public class Rock : BaseObjectDB {
+public class Rock : MonoBehaviour {
+    
+    public GameObject particles;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

@@ -9,24 +9,24 @@
         },
         {
             "Id": "Player2",
-            "Active": 0,
-            "InputJump": "M",
-            "InputLeft": "H",
-            "InputRight": "V"
+            "Active": 1,
+            "InputJump": "w",
+            "InputLeft": "a",
+            "InputRight": "d"
         },
         {
             "Id": "Player3",
-            "Active": 0,
-            "InputJump": "W",
-            "InputLeft": "A",
-            "InputRight": "D"
+            "Active": 1,
+            "InputJump": "w",
+            "InputLeft": "a",
+            "InputRight": "d"
         },
         {
             "Id": "Player4",
-            "Active": 0,
-            "InputJump": "W",
-            "InputLeft": "A",
-            "InputRight": "D"
+            "Active": 1,
+            "InputJump": "w",
+            "InputLeft": "a",
+            "InputRight": "d"
         }
     ]
 }

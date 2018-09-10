@@ -14,11 +14,13 @@ public class CharacterControls : MonoBehaviour {
 
     [Header("Unity Setup Fields")]
     public GameObject graveStone;
-    //public Rigidbody2D rb;   
+    public Collider2D groundPlane;
     public Text scoreText;
     public SpriteRenderer flipIt;
     public float timer;
-    public int jumpCounter = 1;
+    private int jumpCounter = 1;
+    private float distToGround;
+    public Text playerText;
 
     [Header("Json Attribute")]
     private string controlPath;
@@ -27,7 +29,6 @@ public class CharacterControls : MonoBehaviour {
     private void Start()
     {
         controlPath = Application.streamingAssetsPath + "/Controls.json";
-        
         controls = JsonHelper.FromJson<Control>(File.ReadAllText(controlPath));
     }
 
@@ -52,7 +53,7 @@ public class CharacterControls : MonoBehaviour {
         }
         if (Input.GetKey(up))
         {
-            if (jumpCounter >= 0)
+            if (jumpCounter > 0)
             {
                 //Debug.Log("jump");
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpForce * Time.deltaTime);
@@ -60,11 +61,7 @@ public class CharacterControls : MonoBehaviour {
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.name);
-    }
+    
 
     private void Update()
     {
@@ -72,6 +69,13 @@ public class CharacterControls : MonoBehaviour {
         {
             KillEntity(gameObject);
         }
+        if (jumpCounter == 0 && gameObject.GetComponent<Rigidbody2D>().velocity.y == 0)
+        {
+            jumpCounter = 1;
+        }
+        timer += Time.deltaTime;
+        playerText.text = "" + timer.ToString("F2") + "";
+
     }
     public void KillEntity(GameObject character)
     {

@@ -29,6 +29,11 @@ public class Menu : MonoBehaviour {
 
     public void GoMainMenu()
     {
-        SceneManager.GetSceneByName("StartScreen");
+        SceneManager.LoadScene("StartScreen");
+    }
+
+    public void RestartDodgeBall()
+    {
+        SceneManager.LoadScene("DodgeBall");
     }
 }
