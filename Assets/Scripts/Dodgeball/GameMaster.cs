@@ -14,11 +14,11 @@ public class GameMaster : MonoBehaviour {
     public GameObject maMan;
     public GameObject panzer;
     public GameObject roundyy;
+    public GameObject lilBruce;
 
     private string controlJsonPath;
     private string spriteJsonPath;
     private int counter = 0;
-    private float timer = 0f;
     private Text playerText;
     private Image playerImage;
 
@@ -62,7 +62,6 @@ public class GameMaster : MonoBehaviour {
             }
         }
     }
-
     private GameObject GetPlayerChar(string playerString)
     {
         switch (playerString)
@@ -73,6 +72,8 @@ public class GameMaster : MonoBehaviour {
                 return panzer;
             case "Roundyy":
                 return roundyy;
+            case "Lil_Bruce":
+                return lilBruce;
             default:
                 return maMan;
         }

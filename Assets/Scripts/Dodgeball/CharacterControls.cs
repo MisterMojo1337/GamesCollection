@@ -14,10 +14,8 @@ public class CharacterControls : MonoBehaviour {
 
     [Header("Unity Setup Fields")]
     public GameObject graveStone;
-    public Collider2D groundPlane;
-    public Text scoreText;
     public SpriteRenderer flipIt;
-    public float timer;
+    private float timer;
     private int jumpCounter = 1;
     private float distToGround;
     public Text playerText;

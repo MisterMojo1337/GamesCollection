@@ -6,15 +6,15 @@
         },
         {
             "Id": "Player2",
-            "CharSprite": "Ma_Man"
+            "CharSprite": "Panzer"
         },
         {
             "Id": "Player3",
-            "CharSprite": "Ma_Man"
+            "CharSprite": "Roundyy"
         },
         {
             "Id": "Player4",
-            "CharSprite": "Ma_Man"
+            "CharSprite": "Lil_Bruce"
         }
     ]
 }

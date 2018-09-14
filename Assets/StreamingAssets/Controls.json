@@ -17,16 +17,16 @@
         {
             "Id": "Player3",
             "Active": 1,
-            "InputJump": "w",
-            "InputLeft": "a",
-            "InputRight": "d"
+            "InputJump": "t",
+            "InputLeft": "f",
+            "InputRight": "h"
         },
         {
             "Id": "Player4",
             "Active": 1,
-            "InputJump": "w",
-            "InputLeft": "a",
-            "InputRight": "d"
+            "InputJump": "i",
+            "InputLeft": "j",
+            "InputRight": "l"
         }
     ]
 }

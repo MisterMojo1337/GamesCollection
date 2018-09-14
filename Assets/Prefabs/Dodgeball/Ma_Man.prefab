@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61085574440600112
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -99,14 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b2e048e4c3d9a4991693140bef3c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
+  healthPoints: 150
   movementForce: 5
-  jumpForce: 300
+  jumpForce: 400
   graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c, type: 2}
-  scoreText: {fileID: 0}
   flipIt: {fileID: 212637448531779478}
-  timer: 0
-  jumpCounter: 1
+  playerText: {fileID: 0}
 --- !u!212 &212637448531779478
 SpriteRenderer:
   m_ObjectHideFlags: 1
