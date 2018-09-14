@@ -15,6 +15,6 @@ public class Camera : MonoBehaviour {
 
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = new Vector3(0, player.transform.position.y, 0);
     }
 }

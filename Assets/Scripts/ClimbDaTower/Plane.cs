@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundPlane : MonoBehaviour {
+public class Plane : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Neuer Sprung!");
+        collision.gameObject.GetComponent<Mario>().jumpCounter++;
     }
 }

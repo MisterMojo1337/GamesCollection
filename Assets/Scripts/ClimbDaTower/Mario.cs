@@ -1,21 +1,45 @@
 ﻿using UnityEngine;
-using System.Linq;
+using UnityEngine.UI;
 
-public class Mario : BaseCharacterCDT {
+public class Mario : MonoBehaviour {
 
-    private void Update()
+    [Header("Attributes")]
+    
+    public float movementForce = 5f;
+    public float jumpForce = 300f;
+    public float jumpCounter = 1;
+
+    [Header("Unity Setup Fields")]
+    public SpriteRenderer flipIt;
+
+    private void FixedUpdate()
     {
-       
+        GetMovement();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {        
-        jumpCounter += 1;
+    public void GetMovement()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(new Vector3(movementForce * Time.deltaTime, 0));
+            flipIt.flipX = false;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(new Vector3(-movementForce * Time.deltaTime, 0));
+            flipIt.flipX = true;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (jumpCounter > 0)
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpForce * Time.deltaTime);
+                jumpCounter--;
+            }
+        }
     }
-
-    void FixedUpdate () {
-
-        GetMovement(KeyCode.A, KeyCode.D, KeyCode.W);
-        
+    public void KillEntity(GameObject character)
+    {
+        Destroy(character);
     }
 }
