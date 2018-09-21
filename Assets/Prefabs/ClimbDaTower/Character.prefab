@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212208117932361846}
   - component: {fileID: 61859193621678706}
   - component: {fileID: 50595072648003330}
-  - component: {fileID: 114009453377464638}
+  - component: {fileID: 70523528953809800}
+  - component: {fileID: 114398086797542144}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -36,8 +37,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593553806764562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.29, y: -3.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.468, y: -3.261, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002861023, y: 0.039186716}
+  m_Offset: {x: -0.00002861023, y: 0.08195174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,9 +87,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47953606, y: 0.64207363}
+  m_Size: {x: 0.47953606, y: 0.5565436}
   m_EdgeRadius: 0
---- !u!114 &114009453377464638
+--- !u!70 &70523528953809800
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593553806764562}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0026597548, y: -0.23761377}
+  m_Size: {x: 0.49446294, y: 0.081297524}
+  m_Direction: 1
+--- !u!114 &114398086797542144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,14 +112,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1593553806764562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb55fd6634bae9c47a67766355f20c27, type: 3}
+  m_Script: {fileID: 11500000, guid: 465ad4d5a17ee3445b7bae73a41bb689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 5
   jumpForce: 300
   jumpCounter: 1
-  rb: {fileID: 0}
-  flipIt: {fileID: 0}
+  flipIt: {fileID: 212208117932361846}
 --- !u!212 &212208117932361846
 SpriteRenderer:
   m_ObjectHideFlags: 1

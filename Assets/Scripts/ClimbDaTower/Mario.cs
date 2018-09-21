@@ -9,9 +9,6 @@ public class Mario : MonoBehaviour {
     public float jumpForce = 300f;
     public float jumpCounter = 1;
 
-    [Header("Unity Setup Fields")]
-    public SpriteRenderer flipIt;
-
     private void FixedUpdate()
     {
         GetMovement();
@@ -22,12 +19,12 @@ public class Mario : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector3(movementForce * Time.deltaTime, 0));
-            flipIt.flipX = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(new Vector3(-movementForce * Time.deltaTime, 0));
-            flipIt.flipX = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         if (Input.GetKey(KeyCode.W))
         {
@@ -41,5 +38,10 @@ public class Mario : MonoBehaviour {
     public void KillEntity(GameObject character)
     {
         Destroy(character);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        jumpCounter = 1;
     }
 }

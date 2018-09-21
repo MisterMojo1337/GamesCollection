@@ -377,22 +377,7 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1593553806764562, guid: 17de8b78002750c42b710c9ff0701b4d,
     type: 2}
-  m_PrefabInternal: {fileID: 971491605}
---- !u!114 &470667529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 470667528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465ad4d5a17ee3445b7bae73a41bb689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementForce: 5
-  jumpForce: 300
-  jumpCounter: 1
-  flipIt: {fileID: 212208117932361846, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
+  m_PrefabInternal: {fileID: 1009697765}
 --- !u!1001 &500705782
 Prefab:
   m_ObjectHideFlags: 0
@@ -606,7 +591,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &971491605
+--- !u!1001 &1009697765
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -615,11 +600,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.24
+      value: -4.468
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.38
+      value: -3.261
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -627,15 +612,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4517265930858718, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
       propertyPath: m_LocalRotation.w
@@ -645,33 +630,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114009453377464638, guid: 17de8b78002750c42b710c9ff0701b4d,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1099285824}
-    - target: {fileID: 114009453377464638, guid: 17de8b78002750c42b710c9ff0701b4d,
-        type: 2}
-      propertyPath: flipIt
-      value: 
-      objectReference: {fileID: 1099285820}
-    - target: {fileID: 61859193621678706, guid: 17de8b78002750c42b710c9ff0701b4d,
+    - target: {fileID: 70523528953809800, guid: 17de8b78002750c42b710c9ff0701b4d,
         type: 2}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50595072648003330, guid: 17de8b78002750c42b710c9ff0701b4d,
         type: 2}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50595072648003330, guid: 17de8b78002750c42b710c9ff0701b4d,
-        type: 2}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114009453377464638, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17de8b78002750c42b710c9ff0701b4d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1015859207
@@ -720,16 +689,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de2ccb4b2b2ee04e85bd5ea2acd9003, type: 2}
   m_IsPrefabAsset: 0
---- !u!212 &1099285820 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212208117932361846, guid: 17de8b78002750c42b710c9ff0701b4d,
-    type: 2}
-  m_PrefabInternal: {fileID: 971491605}
---- !u!50 &1099285824 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 50595072648003330, guid: 17de8b78002750c42b710c9ff0701b4d,
-    type: 2}
-  m_PrefabInternal: {fileID: 971491605}
 --- !u!1001 &1150068124
 Prefab:
   m_ObjectHideFlags: 0

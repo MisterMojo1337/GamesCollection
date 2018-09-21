@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4969799958577560}
   - component: {fileID: 212881473657333860}
   - component: {fileID: 61808549828501368}
-  - component: {fileID: 114649933146256758}
   m_Layer: 0
   m_Name: Groundplane
   m_TagString: Untagged
@@ -67,17 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.047909, y: 1.1995263}
   m_EdgeRadius: 0
---- !u!114 &114649933146256758
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1275309974278886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd3a19dd82256a41839eab5ca3e7e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212881473657333860
 SpriteRenderer:
   m_ObjectHideFlags: 1
