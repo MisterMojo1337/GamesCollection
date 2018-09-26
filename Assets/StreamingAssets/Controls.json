@@ -3,27 +3,27 @@
         {
             "Id": "Player1",
             "Active": 1,
-            "InputJump": "up",
-            "InputLeft": "left",
-            "InputRight": "right"
-        },
-        {
-            "Id": "Player2",
-            "Active": 1,
             "InputJump": "w",
             "InputLeft": "a",
             "InputRight": "d"
         },
         {
+            "Id": "Player2",
+            "Active": 1,
+            "InputJump": "u",
+            "InputLeft": "h",
+            "InputRight": "k"
+        },
+        {
             "Id": "Player3",
             "Active": 1,
-            "InputJump": "t",
-            "InputLeft": "f",
-            "InputRight": "h"
+            "InputJump": "up",
+            "InputLeft": "left",
+            "InputRight": "right"
         },
         {
             "Id": "Player4",
-            "Active": 1,
+            "Active": 0,
             "InputJump": "i",
             "InputLeft": "j",
             "InputRight": "l"

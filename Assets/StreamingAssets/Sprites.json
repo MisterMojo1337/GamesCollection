@@ -2,7 +2,7 @@
     "Items": [
         {
             "Id": "Player1",
-            "CharSprite": "Ma_Man"
+            "CharSprite": "Lil_Bruce"
         },
         {
             "Id": "Player2",
@@ -10,11 +10,11 @@
         },
         {
             "Id": "Player3",
-            "CharSprite": "Roundyy"
+            "CharSprite": "Ma_Man"
         },
         {
             "Id": "Player4",
-            "CharSprite": "Lil_Bruce"
+            "CharSprite": ""
         }
     ]
 }
