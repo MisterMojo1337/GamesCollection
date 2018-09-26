@@ -2,7 +2,7 @@
     "Items": [
         {
             "Id": "Player1",
-            "Active": 1,
+            "Active": 0,
             "InputJump": "B",
             "InputLeft": "H",
             "InputRight": "E"

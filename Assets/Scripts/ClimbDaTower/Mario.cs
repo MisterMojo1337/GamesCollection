@@ -42,6 +42,9 @@ public class Mario : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        jumpCounter = 1;
+        if (collision.collider.tag == "Plane")
+        {
+            jumpCounter = 1;
+        }
     }
 }
