@@ -9,9 +9,25 @@ public class Mario : MonoBehaviour {
     public float jumpForce = 300f;
     public float jumpCounter = 1;
 
+    private float maxHeight;
+
+    private void Start()
+    {
+        maxHeight = gameObject.transform.position.y;
+    }
     private void FixedUpdate()
     {
         GetMovement();
+    }
+
+    private void Update()
+    {
+        if (gameObject.transform.position.y > maxHeight)
+        {
+            maxHeight = gameObject.transform.position.y;
+        } else if (gameObject.transform.position.y < maxHeight - 7){
+            Destroy(gameObject);
+        }
     }
 
     public void GetMovement()
@@ -34,10 +50,6 @@ public class Mario : MonoBehaviour {
                 jumpCounter--;
             }
         }
-    }
-    public void KillEntity(GameObject character)
-    {
-        Destroy(character);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

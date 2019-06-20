@@ -20,11 +20,8 @@ public class GameMaster : MonoBehaviour {
     private void Start()
     {
         controlPath = Application.streamingAssetsPath + "/Controls.json";
-        spritePath = Application.streamingAssetsPath + "/Sprites.json";
 
         var controls = JsonHelper.FromJson<Control>(File.ReadAllText(controlPath));
-        var sprites = JsonHelper.FromJson<OwnSprite>(File.ReadAllText(spritePath));
-        var temp = players.GetComponentsInChildren<Rigidbody2D>(true);
 
         foreach (var character in controls)
         {

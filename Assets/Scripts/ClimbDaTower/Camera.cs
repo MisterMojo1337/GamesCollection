@@ -5,16 +5,31 @@ using UnityEngine;
 public class Camera : MonoBehaviour {
 
     public GameObject player;
-
-    private Vector3 offset;
+    
+    private Vector3 playerMaxHeight = new Vector3();
 
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        playerMaxHeight = player.transform.position;
     }
 
     void LateUpdate()
     {
-        transform.position = new Vector3(0, player.transform.position.y, 0);
+        if (player != null)
+        {
+            if (player.transform.position.y > playerMaxHeight.y - 2)
+            {
+                transform.position = new Vector3(0, player.transform.position.y, 0);
+                if (player.transform.position.y > playerMaxHeight.y)
+                {
+                    playerMaxHeight = player.transform.position;
+                }
+            }
+            else
+            {
+                transform.position = new Vector3(0, playerMaxHeight.y - 2, 0);
+            }
+        }
+
     }
 }
