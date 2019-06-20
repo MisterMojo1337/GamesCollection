@@ -9,21 +9,21 @@
         },
         {
             "Id": "Player2",
-            "Active": 1,
+            "Active": 0,
             "InputJump": "w",
             "InputLeft": "a",
             "InputRight": "d"
         },
         {
             "Id": "Player3",
-            "Active": 1,
-            "InputJump": "t",
-            "InputLeft": "f",
-            "InputRight": "h"
+            "Active": 0,
+            "InputJump": "w",
+            "InputLeft": "a",
+            "InputRight": "d"
         },
         {
             "Id": "Player4",
-            "Active": 1,
+            "Active": 0,
             "InputJump": "i",
             "InputLeft": "j",
             "InputRight": "l"

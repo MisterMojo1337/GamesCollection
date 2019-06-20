@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 150
   movementForce: 5
-  jumpForce: 400
+  jumpForce: 250
   graveStone: {fileID: 1594569096132570, guid: fe2342b159a59c345b5e6b3b4866172c, type: 2}
   flipIt: {fileID: 212637448531779478}
   playerText: {fileID: 0}
