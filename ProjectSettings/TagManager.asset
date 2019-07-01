@@ -8,6 +8,8 @@ TagManager:
   - Panzer
   - Gravestone
   - Healkit
+  - Wall
+  - Plane
   layers:
   - Default
   - TransparentFX
