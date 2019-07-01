@@ -20,6 +20,7 @@
             "InputJump": "up",
             "InputLeft": "left",
             "InputRight": "right"
+
         },
         {
             "Id": "Player4",
